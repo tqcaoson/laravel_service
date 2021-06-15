@@ -4,9 +4,9 @@ namespace Core\Providers;
 
 use Core\Services\BookService;
 use Core\Repositories\BookRepository;
-use Core\Services\BookServiceContract;
+use Core\Services\ServiceContract;
 use Illuminate\Support\ServiceProvider;
-use Core\Repositories\BookRepositoryContract;
+use Core\Repositories\RepositoryContract;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -27,7 +27,7 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(BookRepositoryContract::class, BookRepository::class);
-        $this->app->bind(BookServiceContract::class, BookService::class);
+        $this->app->bind(RepositoryContract::class, BookRepository::class);
+        $this->app->bind(ServiceContract::class, BookService::class);
     }
 }

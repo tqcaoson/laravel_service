@@ -2,13 +2,13 @@
 
 namespace Core\Services;
 
-use Core\Repositories\BookRepositoryContract;
+use Core\Repositories\RepositoryContract;
 
-class BookService implements BookServiceContract
+class BookService implements ServiceContract
 {
     protected $repository;
 
-    public function __construct(BookRepositoryContract $repository)
+    public function __construct(RepositoryContract $repository)
     {
         return $this->repository = $repository;
     }

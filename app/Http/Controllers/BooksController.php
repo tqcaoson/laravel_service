@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\EditBookRequest;
-use Core\Services\BookServiceContract;
+use Core\Services\ServiceContract;
 use App\Http\Requests\CreateBookRequest;
 
 class BooksController extends Controller
 {
     protected $service;
 
-    public function __construct(BookServiceContract $service)
+    public function __construct(ServiceContract $service)
     {
         $this->service = $service;
     }

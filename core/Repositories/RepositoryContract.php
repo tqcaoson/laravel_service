@@ -1,8 +1,8 @@
 <?php
 
-namespace Core\Services;
+namespace Core\Repositories;
 
-interface BookServiceContract
+interface RepositoryContract
 {
     public function paginate();
     public function find($id);

@@ -4,7 +4,7 @@ namespace Core\Repositories;
 
 use App\Book;
 
-class BookRepository implements BookRepositoryContract
+class BookRepository implements RepositoryContract
 {
     protected $model;
 
